@@ -47,6 +47,16 @@ public class AdminHomePage extends JFrame implements ActionListener{
         studentdetails.addActionListener(this);
         details.add(studentdetails);
         
+        JMenuItem studentaccounts = new JMenuItem("View Student Accounts");
+        studentaccounts.setBackground(Color.WHITE);
+        studentaccounts.addActionListener(this);
+        details.add(studentaccounts);
+        
+        JMenuItem instructoraccounts = new JMenuItem("View Instructor Accounts");
+        instructoraccounts.setBackground(Color.WHITE);
+        instructoraccounts.addActionListener(this);
+        details.add(instructoraccounts);
+        
         // Leave
         JMenu leave = new JMenu("Apply Leave");
         leave.setForeground(Color.BLUE);
@@ -140,6 +150,10 @@ public class AdminHomePage extends JFrame implements ActionListener{
             new InstructorDetails();
         }else if(msg.equals("View Student Details")){
             new StudentDetails();
+        }else if(msg.equals("View Student Accounts")){
+            new StudentAccounts();
+        }else if(msg.equals("View Instructor Accounts")){
+            new InstructorAccounts();
         }else if(msg.equals("Instructor Leave")){
             new InstructorLeave();
         }else if(msg.equals("Student Leave")){
