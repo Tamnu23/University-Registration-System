@@ -1,22 +1,22 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package SplashScreen;
 
-import Instructor.InstructorMain;
-import Student.StudentMain;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import Student.StudentRegister;
-import Instructor.InstructorRegister;
+import Student.StudentLogin;
+import Instructor.InstructorLogin;
 
-public class Registration extends JFrame implements ActionListener{
-    
-    JButton student,instructor, already;
-    
-    public Registration(){
+public class LoginScreen extends JFrame implements ActionListener{
+    JButton student,instructor;
+    LoginScreen(){
         getContentPane().setBackground(Color.WHITE);
         setLayout(null);
         
-        student = new JButton("Register as Student");
+        student = new JButton("Login as Student");
         student.setBounds(138, 200, 300, 200);
         student.setBackground(Color.WHITE);
         student.setForeground(Color.BLACK);
@@ -24,21 +24,13 @@ public class Registration extends JFrame implements ActionListener{
         student.setFont(new Font("Tahoma",Font.BOLD,15));
         add(student);
         
-        instructor = new JButton("Register as Instructor");
+        instructor = new JButton("Login as Instructor");
         instructor.setBounds(138,400,300,200);
         instructor.setBackground(Color.WHITE);
         instructor.setForeground(Color.BLACK);
         instructor.addActionListener(this);
         instructor.setFont(new Font("Tahoma",Font.BOLD,15));
         add(instructor);
-        
-        already = new JButton("Already have an account? Login Here");
-        already.setBounds(138, 600, 200, 60);
-        already.setBackground(Color.WHITE);
-        already.setForeground(Color.BLACK);
-        already.addActionListener(this);
-        already.setFont(new Font("Tahoma",Font.BOLD,15));
-        add(already);
         
         setSize(600,900);
         setLocation(500,250);
@@ -48,15 +40,13 @@ public class Registration extends JFrame implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent ae){
         if(ae.getSource() == student){
-            new StudentRegister();
+            new StudentLogin();
         }else if(ae.getSource() == instructor){
-            new InstructorRegister();
-        }else if(ae.getSource() == already){
-            new LoginScreen();
+            new InstructorLogin();
         }
     }
     
     public static void main(String[] args){
-        new Registration();
+        new LoginScreen();
     }
 }

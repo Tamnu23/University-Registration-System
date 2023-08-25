@@ -12,6 +12,8 @@ import Connection.Conn;
 
 public class InstructorAccounts extends JFrame {
     
+    Choice instructorName;
+    
     public InstructorAccounts(){
         setSize(1000, 700);
         setLocation(250, 50);
@@ -23,6 +25,24 @@ public class InstructorAccounts extends JFrame {
         heading.setBounds(50, 10, 400, 30);
         heading.setFont(new Font("Tahoma", Font.BOLD, 30));
         add(heading);
+        
+        JLabel noti = new JLabel("FOR DELETE ONLY");
+        noti.setBounds(420, 20, 200, 20);
+        add(noti);
+        
+        instructorName = new Choice();
+        instructorName.setBounds(180, 20, 150, 20);
+        add(instructorName);
+        
+        try {
+            Conn c = new Conn();
+            ResultSet rs = c.s.executeQuery("select * from instructorRegister");
+            while(rs.next()) {
+                instructorName.add(rs.getString("id"));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         
         JTable table = new JTable();
         

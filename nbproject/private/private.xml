@@ -3,23 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/htetaungshine/NetBeansProjects/University%20Registration%20System/src/Admin/SplashScreenAdmin.java</file>
-            <file>file:/Users/htetaungshine/NetBeansProjects/University%20Registration%20System/src/Student/StudentMain.java</file>
-            <file>file:/Users/htetaungshine/NetBeansProjects/University%20Registration%20System/src/Admin/AddInstructor.java</file>
-            <file>file:/Users/htetaungshine/NetBeansProjects/University%20Registration%20System/src/SplashScreen/Registration.java</file>
-            <file>file:/Users/htetaungshine/NetBeansProjects/University%20Registration%20System/src/Admin/About.java</file>
-            <file>file:/Users/htetaungshine/NetBeansProjects/University%20Registration%20System/src/Admin/AdminHomePage.java</file>
-            <file>file:/Users/htetaungshine/NetBeansProjects/University%20Registration%20System/src/Admin/StudentLeave.java</file>
-            <file>file:/Users/htetaungshine/NetBeansProjects/University%20Registration%20System/src/Student/StudentAdd.java</file>
-            <file>file:/Users/htetaungshine/NetBeansProjects/University%20Registration%20System/src/AdminSite/AdminSite.java</file>
-            <file>file:/Users/htetaungshine/NetBeansProjects/University%20Registration%20System/src/UserSite/UserSite.java</file>
-            <file>file:/Users/htetaungshine/NetBeansProjects/University%20Registration%20System/src/Admin/AddStudent.java</file>
-            <file>file:/Users/htetaungshine/NetBeansProjects/University%20Registration%20System/src/Instructor/InstructorAdd.java</file>
-            <file>file:/Users/htetaungshine/NetBeansProjects/University%20Registration%20System/src/Admin/FeeStructure.java</file>
-            <file>file:/Users/htetaungshine/NetBeansProjects/University%20Registration%20System/src/Connection/Conn.java</file>
-            <file>file:/Users/htetaungshine/NetBeansProjects/University%20Registration%20System/src/Admin/UpdateInstructorDetails.java</file>
-            <file>file:/Users/htetaungshine/NetBeansProjects/University%20Registration%20System/src/Admin/UpdateStudentDetails.java</file>
-            <file>file:/Users/htetaungshine/NetBeansProjects/University%20Registration%20System/src/SplashScreen/Splash.java</file>
+            <file>file:/Users/htetaungshine/NetBeansProjects/University%20Registration%20System/src/Admin/InstructorAccounts.java</file>
+            <file>file:/Users/htetaungshine/NetBeansProjects/University%20Registration%20System/src/Admin/InstructorDetails.java</file>
         </group>
     </open-files>
 </project-private>

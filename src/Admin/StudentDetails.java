@@ -11,20 +11,24 @@ public class StudentDetails extends JFrame implements ActionListener {
 
     Choice crollno;
     JTable table;
-    JButton search, print, update, add, cancel;
+    JButton search, print, update, add, cancel, delete;
     
     public StudentDetails() {
         
         getContentPane().setBackground(Color.WHITE);
         setLayout(null);
         
-        JLabel heading = new JLabel("Search by Roll Number");
-        heading.setBounds(20, 20, 150, 20);
+        JLabel heading = new JLabel("Select a Roll Number to delete");
+        heading.setBounds(20, 20, 200, 20);
         add(heading);
         
         crollno = new Choice();
-        crollno.setBounds(180, 20, 150, 20);
+        crollno.setBounds(230, 20, 180, 20);
         add(crollno);
+        
+        JLabel noti = new JLabel("FOR DELETE ONLY");
+        noti.setBounds(420, 20, 200, 20);
+        add(noti);
         
         try {
             Conn c = new Conn();
@@ -65,8 +69,13 @@ public class StudentDetails extends JFrame implements ActionListener {
         update.addActionListener(this);
         add(update);
         
+        delete = new JButton("Delete");
+        delete.setBounds(320, 70, 80, 20);
+        delete.addActionListener(this);
+        add(delete);
+        
         cancel = new JButton("Cancel");
-        cancel.setBounds(320, 70, 80, 20);
+        cancel.setBounds(420, 70, 80, 20);
         cancel.addActionListener(this);
         add(cancel);
         
@@ -91,7 +100,25 @@ public class StudentDetails extends JFrame implements ActionListener {
         } else if (ae.getSource() == update) {
             setVisible(false);
             new UpdateStudentDetails();
-        } else {
+        } else if(ae.getSource() == delete){
+            try{
+                String selectedRollNo = crollno.getSelectedItem();
+
+                int option = JOptionPane.showConfirmDialog(this, "Are you sure you want to delete this student?", "Confirm Delete", JOptionPane.YES_NO_OPTION);
+            
+                if (option == JOptionPane.YES_OPTION) {
+                    String query = "delete from student where rollno = '" + selectedRollNo + "'";
+                    Conn con = new Conn();
+                    con.s.execute(query);
+                    JOptionPane.showMessageDialog(this, "Student Details Deleted Successfully");
+                    // Refresh the table after deletion
+                    ResultSet rs = con.s.executeQuery("select * from student");
+                    table.setModel(DbUtils.resultSetToTableModel(rs));
+                }
+            }catch(Exception e){
+                e.printStackTrace();
+            }
+        }else {
             setVisible(false);
         }
     }

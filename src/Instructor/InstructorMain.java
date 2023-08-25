@@ -69,7 +69,7 @@ public class InstructorMain extends JFrame implements ActionListener{
         
         if (msg.equals("Exit")){
             setVisible(false);
-        }else if(msg.equals("Register as Student")){
+        }else if(msg.equals("Register as Instructor")){
             new InstructorAdd();
         }else if(msg.equals("About")){
             new About();
